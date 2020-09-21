@@ -1,7 +1,7 @@
 ## Eye-Blink-Input
-                                                    Eye Blink Input
-                            Building a community conscious computer vision algorithm that aids
-                                       in input methods for the differently abled.
+                                                  Eye Blink Input
+                          Building a community conscious computer vision algorithm that aids
+                                     in input methods for the differently abled.
 
 
 ### Abstract
