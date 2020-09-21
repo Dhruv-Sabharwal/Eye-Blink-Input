@@ -38,7 +38,9 @@ Getting image frames from the web camera was the easiest of all the issues that 
 Python:
 We use python to implement the algorithm and make necessary interactions with the OpenCV library. The first issue we faced was the unfamiliarity with NumPy array data structure, the structure of choice for returning image frames by the OpenCV Capture method. Once, we knew about the differences between these and conventional python list we went ahead relatively smooth.
 Next, there were a lot of complex math operations involved for the initial training ranging from matrix operations to probability. The matrix operations were required mostly for training purposes since the images were 3D NumPy arrays and it took some time for us to wrap our brains around the inner workings of the same. For recognition of state in a frame probability.
-Finally, we wrote object oriented code for all the methods required for the process of training and recognition. We made the initialization method and the two detection methods. We then created an object of the above OOPs class. We also implemented sockets in python to send state data from python to java.
+Finally, we wrote object oriented code for all the methods required for the process of training and recognition. We made the initialization method and the two detection methods. We then created an object of the above OOPs class. We also implemented sockets in python to send state data from python to java. A Snippet is provided below:
+
+![](images/socket.png)
 
 
 Java:				
