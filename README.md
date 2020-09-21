@@ -6,7 +6,7 @@
 
 Abstract
 				              			
-The projects’ main  aim was to develop a computer vision algorithm that assists in input methods by detecting the state of an object in a digital frame after initial training with use of a video capturing device.
+The projects’ main aim was to develop a computer vision algorithm that assists in input methods by detecting the state of an object in a digital frame after initial training with use of a video capturing device.
 The project works on the fundamental concepts of creating a solution for real world problems that are constantly faced in the 21st century. Recording data using methods that assist the differently abled, by allowing them to input data at the “blink of an eye” ,the algorithm helps in controlling, manipulating and inputting data to a machine.
 The algorithm also bridges the gap between technology and difficulties faced by people in using these technological advances and helps by being incredibly user-friendly in the above mentioned situations. In addition, It serves the bigger purpose of solving real life problems rather than creating something superficial.
 
@@ -36,11 +36,7 @@ Getting image frames from the web camera was the easiest of all the issues that 
 
 
 Python:
-We use python to implement the algorithm and make necessary interactions with the OpenCV library. The first issue we faced was the unfamiliarity with NumPy array data structure, the structure of choice for returning image frames by the OpenCV Capture method. Once, we knew about the differences between these and conventional python list we went ahead relatively smooth.
-Next, there were a lot of complex math operations involved for the initial training ranging from matrix operations to probability. The matrix operations were required mostly for training purposes since the images were 3D NumPy arrays and it took some time for us to wrap our brains around the inner workings of the same. For recognition of state in a frame probability.
-Finally, we wrote object oriented code for all the methods required for the process of training and recognition. We made the initialization method and the two detection methods. We then created an object of the above OOPs class. We also implemented sockets in python to send state data from python to java. A Snippet is provided below:
-
-![](images/socket.png)
+We use python to implement the algorithm and make necessary interactions with the OpenCV library. There were a lot of complex math operations involved for the initial training ranging from matrix operations to probability. The matrix operations were required mostly for training purposes since the images were 3D NumPy arrays and it took some time for us to wrap our brains around the inner workings of the same. Finally, we wrote object oriented code for all the methods required for the process of training and recognition. We made the initialization method and the two detection methods. We then created an object of the above OOPs class. We also implemented sockets in python to send state data from python to java.
 
 
 Java:				
@@ -49,7 +45,9 @@ Java was used extensively in designing the GUI section of the project. The basic
 As the GUI runs , it displays the entire matrix of options in the keyboard on the screen. The array is hidden from the screen after 5 seconds. Then at each juncture of 2 seconds, it starts displaying the individual columns, first the first column and then the next and so on until the user blinks. At this point the value of the column is recorded and the column freezes on the screen and then moves iteratively throughout the row elements inside that column. Again the program captures the value once a blink is recorded. This value is then concatenated to the “Text Entered: ” field at the top of the JFrame.
 The initial problem we faced while working on this aspect was struggling with the Thread.Sleep() function and Timer() function. The JFrame would not change state as required after an initial delay, and would end up freezing on the screen, hence defeating the whole purpose of the proposed GUI. Thread.sleep() is done on the Event Dispatch Thread which will lock the GUI. Also, the code required that no JButtons be used and hence we had to abstain from using the ActionListener() and ActionPerformed() functionalities. After initial problems, a fix was figured out and was implemented. This can be seen in the following snippet of the code: 
 
-![](images/gui.png)
+<p align="center">
+  <img width="460" height="300" src="images/gui.png">
+</p>
 
 This fix uses the System.currentTimeMillis() function from java.lang package to record time at a particular instant and then compare it with the time recorded at some previous point to bring about changes in the JFrame.
 
@@ -59,14 +57,18 @@ Socket Programming:
                   
 Once the implementation of the above was figured out , the remaining section of GUI was worked on. The next part of the GUI was implementing Sockets using TCP between the Python backend and Java GUI. The problem with the socket programming was the lack of prior knowledge. However, by understanding the concept and referring to a few samples codes online a basic idea of the process was developed. Then a sample program was written to connect the Python  client with the Java server. The Socket programming basically bridged the gap between the GUI and the Python code by facilitating an easy input-output medium. A Snippet is provided below:
 
+<p align="center">
+  <img width="460" height="300" src="images/socket.png">
+</p>
+
 
   
-Once the three different aspect of the project were successfully developed, we began with the pilot testing phase. We trained our algorithm with multiple scenarios( light intensity, various eye structures, various hypothetical eye blink frames). The results of these tests are expanded on in the following section. 
+Once the three different aspect of the project were successfully developed, we began with the pilot testing phase. We trained our algorithm with multiple scenarios (light intensity, various eye structures, various hypothetical eye blink frames). The results of these tests are expanded on in the following section. 
 
 RESULTS
           
           
-The Algorithm follows a pattern when implemented. It starts off with a training section where the eye state of the user is recorded and compared for open and closed state values. Once successfully recorded it prompts the GUI to appear and start functioning. The snippets of the process are displayed below:
+The Algorithm follows a pattern when implemented. It starts off with a training section where the eye state of the user is recorded and compared for open and closed state values. Once successfully recorded it prompts the GUI to appear and start functioning.
 
 Though finally successful, a lot of problems were faced and then fixed in the due course of this project development.
 Light intensity resulted in various erroneous data. 
@@ -78,6 +80,7 @@ One of the way we fixed the problem was by holding intensive training sessions ,
 CONCLUSION
 
 In a time when technology is perhaps the centre of all of existence, it should not be provided just to those who can afford it but to those who also need it. And that is what our project has successfully achieved. It bridges this gap and provides to people who are unable to use technology in its conventional form, a user friendly alternate at data input by providing a inclusive human-computer interface.
+
 REFERENCES
 http://www.ebenezertechs.com/instalar-opencv-2-4-13-en-ubuntu-14-04-y-16-04/
 https://en.wikipedia.org/wiki/Locked-in_syndrome
