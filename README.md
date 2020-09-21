@@ -1,7 +1,7 @@
 ## Eye-Blink-Input
                                                      Eye Blink Input
-                        Building a community conscious computer vision algorithm that aids
-                                      in input methods for the differently abled.
+                             Building a community conscious computer vision algorithm that aids
+                                        in input methods for the differently abled.
 
 
 ### Abstract
@@ -15,8 +15,8 @@ The algorithm also bridges the gap between technology and difficulties faced by 
 Using a Video capturing device and given algorithm-software interface, input can be provided by an eye-blink. This input can be stored successfully and actions on this input can be performed.
 
 ### Platforms used
-OpenCV
-Python
+OpenCV <br>
+Python <br>
 Java
 
 ### Procedure
