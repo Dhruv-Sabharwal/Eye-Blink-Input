@@ -1,5 +1,5 @@
-## Eye-Blink-Input
-                                                  Eye Blink Input
+## EyeChat
+                                                      EyeChat
                           Building a community conscious computer vision algorithm that aids
                                      in input methods for the differently abled.
 
